@@ -45,6 +45,8 @@ const studenti = [
   },
 ]
 
+const container = document.querySelector('.container');
+
 const neoStudenti = studenti.map(object => {
   const studente = {
     nomeCognome: `${object.nome} ${object.cognome}`,
@@ -54,7 +56,18 @@ const neoStudenti = studenti.map(object => {
   return studente;
 })
 
-console.log(neoStudenti);
+neoStudenti.forEach((studente) => {
+  container.innerHTML += `
+  <div class="col">
+    <div class="card">
+      <img src="img/5005529.webp" alt="${studente.nomeCognome}">
+      <h3>${studente.nomeCognome}</h3>
+      <p>Matricola: ${studente.matricola}</p>
+      <p>Media: ${studente.mediaVoti}</p>
+    </div>
+  </div>
+`
+})
 
 function calcoloMediaVoti(voti) {
   const length = Object.keys(voti).length;
