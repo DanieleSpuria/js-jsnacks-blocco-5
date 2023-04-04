@@ -45,6 +45,8 @@ const studenti = [
   },
 ]
 
+studenti.sort(SortArray);
+
 const container = document.querySelector('.container');
 
 const neoStudenti = studenti.map(object => {
@@ -80,4 +82,10 @@ function calcoloMediaVoti(voti) {
   return media;
 }
 
+// bho
+function SortArray(x, y){
+  if (x.cognome < y.cognome) {return -1;}
+  if (x.cognome > y.cognome) {return 1;}
+  return 0;
+}
 

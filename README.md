@@ -9,3 +9,5 @@ Dobbiamo creare un nuovo elenco dove ogni studente ha un nome-cognome, matricola
 
 ***BONUS***   
 Aggiungere la foto o l’avatar dello studente e stampare tutti gli studenti con delle card HTML in ordine alfabetico per cognome
+
+- Utilizzato metodo .sort() per l'ordinamento alfabetico, senza capirne il funzionamento.
