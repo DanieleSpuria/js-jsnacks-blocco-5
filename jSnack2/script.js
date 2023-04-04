@@ -47,7 +47,7 @@ const studenti = [
 
 const neoStudenti = studenti.map(object => {
   const studente = {
-    nomeCognome: object.nome,
+    nomeCognome: `${object.nome} ${object.cognome}`,
     matricola: object.matricola,
     mediaVoti: calcoloMediaVoti(object.voti),
   }
