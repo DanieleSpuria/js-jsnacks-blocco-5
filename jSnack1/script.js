@@ -33,11 +33,18 @@ const utenti = [
     nome: 'Anna',
     cognome: 'Manna',
     eta: 80
-  }
+  },
   {
-    nome: 'Romoaldo',
+    nome: 'Romualda',
     cognome: 'Ortense',
     eta: 10
   }
 ]
+
+const under18 = utenti.filter(utente => (utente.eta < 18));
+const over65 = utenti.filter(utente => (utente.eta > 65));
+
+console.log('utenti', utenti);
+console.log('under18', under18);
+console.log('over65', over65);
 
