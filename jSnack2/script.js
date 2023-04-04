@@ -44,3 +44,27 @@ const studenti = [
     }
   },
 ]
+
+const neoStudenti = studenti.map(object => {
+  const studente = {
+    nomeCognome: object.nome,
+    matricola: object.matricola,
+    mediaVoti: calcoloMediaVoti(object.voti),
+  }
+  return studente;
+})
+
+console.log(neoStudenti);
+
+function calcoloMediaVoti(voti) {
+  const length = Object.keys(voti).length;
+  let somma = 0;
+  let media = 0;
+  for (let key in voti) {
+    somma += voti[key];
+  }
+  media = somma / length;
+  return media;
+}
+
+
