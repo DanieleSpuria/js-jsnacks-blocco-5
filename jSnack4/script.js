@@ -35,3 +35,7 @@ const students = [
     grades: 84
   },
 ]
+
+const newClass = students.map(student => student.name.toUpperCase());
+
+console.log(newClass);
