@@ -36,6 +36,7 @@ const teams = [
   }
 ]
 
+const container = document.querySelector('.container');
 let getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 teams.forEach((team) => {
@@ -50,6 +51,17 @@ const newArray = teams.map(team => {
     falliSubiti
   }
   return team;
+});
+
+newArray.forEach(team => {
+  const {nome, falliSubiti} = team;
+  container.innerHTML += `
+    <div class="team">
+      <h2>${nome}</h2>
+      <p>Falli subiti: ${falliSubiti}</p>
+    </div>
+  `
+
 });
 
 console.log(newArray);
