@@ -37,5 +37,9 @@ const students = [
 ]
 
 const newClass = students.map(student => student.name.toUpperCase());
+const over70 = students.filter(student => student.grades >= 70);
+const overId = students.filter(student => (student.grades >= 70) && (student.id >= 120));
 
-console.log(newClass);
+console.log('Targhe: ',newClass);
+console.log('over70',over70);
+console.log('overId',overId);
