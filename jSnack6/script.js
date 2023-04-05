@@ -43,5 +43,13 @@ teams.forEach((team) => {
   team.falliSubiti = getRandomNumber(1,100);
 });
 
+const newArray = teams.map(team => {
+  const {nome, falliSubiti} = team;
+  team = {
+    nome,
+    falliSubiti
+  }
+  return team;
+});
 
-console.log(teams);
+console.log(newArray);
