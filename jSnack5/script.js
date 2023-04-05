@@ -28,3 +28,13 @@ const bikes = [
     weigth: 18
   }
 ]
+
+const min = bikes.find(bike => {
+  const {name, weigth} = bike;
+  if (weigth === Math.min(weigth))
+    console.log(
+      `La bici ${name} è la più leggera e pesa solo ${weigth}`
+      );
+  return weigth;
+});
+console.log(min);
